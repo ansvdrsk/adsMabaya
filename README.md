@@ -1,5 +1,4 @@
-# online-sponsored-ads
-online sponsored ads application
+
 
 # API usage:
 
@@ -7,25 +6,23 @@ POST http://localhost:8080/create-campaign
 
 BODY example:
 {
-    "name": "test",
-    "startDate": "2021-01-22",
-    "category": "SHOES",
-    "bid": 12.0
+  "name": "Example Campaign",
+  "startDate": "2023-07-11",
+  "productIds": [1, 2, 3],
+  "bid": 0.5,
+  "category": "Category1"
 }
 
 -----------------------
 
-GET http://localhost:8080/serve-ad?category?SHOES
+GET http://localhost:8080/serve-ad?category="Name of the Category"
 
 -----------------------
 
-# Database (H2 In Memory Database)
+# H2 Database
 
-H2 database has an embedded GUI console for browsing the contents of a database and running SQL queries.
+H2 database has GUI console for browsing the contents of a database.
 
 When application is running go to:
 http://localhost:8080/h2-console/
 
-Jdbc url: jdbc:h2:mem:testdb
-
-username: sa
